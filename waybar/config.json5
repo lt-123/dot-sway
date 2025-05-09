@@ -1,0 +1,59 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "modules-left": ["sway/workspaces", "sway/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu", "memory", "tray", "backlight"],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "T": "★",
+      "1": "zen",
+      "2": "develop",
+      "3": "message",
+      "4": "notepad",
+      "10": "windows",
+      "focused": "🤪",
+      "urgent": "⚠️",
+      "default": "✧"
+    }
+ },
+  "sway/window": {
+    // "format": "{title}",
+    "format": "",
+    "max-length": 50,
+  },
+  "layout": {
+    "format": "{layout}",
+    "exec": "hyprctl getlayout"
+  },
+  "clock": {
+    "format": "{:%Y-%m-%d %H:%M}",
+    "tooltip": false
+  },
+  "cpu": {
+    "format": "{usage}%",
+    "tooltip-format": "CPU Usage: {usage}%"
+  },
+  "memory": {
+    "format": "{used} / {total} GB",
+    "tooltip-format": "Memory: {used} / {total} GB"
+  },
+  "temperature": {
+    "format": " {temperature}°C",
+    "exec": "sensors | grep 'Package id 0:' | awk '{print $4}'"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 15
+  },
+  "backlight": {
+    "format": " {percent}%",
+    "device": "intel_backlight"
+  },
+  "pulseaudio": {
+    "format": " {volume}%"
+  }
+}

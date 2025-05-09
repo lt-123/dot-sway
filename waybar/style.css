@@ -1,0 +1,39 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", "monospace";
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #1e1e2e;
+}
+
+/* #workspaces button {
+  color: #ffffff;
+  background: #44475a;
+  border-radius: 5px;
+  margin: 2px;
+} */
+
+#workspaces button.focused {
+  background: #6272a4;
+  color: #ffffff;
+}
+
+#clock {
+  font-weight: bold;
+}
+
+.module {
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.module:hover {
+  background-color: #44475a;
+}
+
+#battery {
+  color: #50fa7b;
+}
+
+#network {
+  color: #8be9fd;
+}
