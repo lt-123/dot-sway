@@ -11,10 +11,10 @@
     "format-icons": {
       "T": "★",
       "1": "zen",
-      "2": "develop",
-      "3": "message",
-      "4": "notepad",
-      "10": "windows",
+      "2": "dev",
+      "3": "im",
+      "4": "note",
+      "10": "rdp",
       "focused": "🤪",
       "urgent": "⚠️",
       "default": "✧"
