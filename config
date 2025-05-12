@@ -42,6 +42,8 @@ exec wl-paste -t text --watch clipman store --no-persist
 
 bindsym Print exec grim -g "$(slurp)" - | swappy -f -
 
+bindsym F1 exec sh /home/liut/.config/sway/terminal.sh
+
 
 ### Idle configuration
 #
@@ -134,7 +136,7 @@ bindsym Print exec grim -g "$(slurp)" - | swappy -f -
     set $ws9 "9"
     set $ws10 "10"
 
-    bindsym F1 workspace T
+    # bindsym F1 workspace T
 
     # Switch to workspace
     bindsym $mod+1 workspace number $ws1
