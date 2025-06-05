@@ -16,12 +16,14 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu wmenu-run
+# set $menu wmenu-run
+set $menu rofi -show drun
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /home/liut/.config/sway/wallpapers/AnimeWaiting2.jpg fill
 #
 # Example configuration:
 #
@@ -36,7 +38,7 @@ exec --no-startup-id tilda
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id synology-drive
 exec --no-startup-id /home/liut/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox %u
-exec --no-startup-id waybar -c /home/liut/.config/sway/waybar/config.json5 #/home/liut/.config/sway/waybar/style.css
+exec --no-startup-id waybar -c /home/liut/.config/sway/waybar/config.jsonc -s /home/liut/.config/sway/waybar/style.css
 
 exec wl-paste -t text --watch clipman store --no-persist
 
@@ -44,6 +46,7 @@ bindsym Print exec grim -g "$(slurp)" - | swappy -f -
 
 bindsym F1 exec sh /home/liut/.config/sway/terminal.sh
 
+# bindsym $mod+L exec hyprlock
 
 ### Idle configuration
 #
@@ -287,3 +290,4 @@ bindsym $mod+r mode "resize"
 # }
 
 include /etc/sway/config.d/*
+include /home/liut/.config/sway/config.d/*

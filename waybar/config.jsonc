@@ -1,0 +1,40 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu", "memory", "tray"],
+  "sway/workspaces": {
+    "persist": true,
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "T": "★",
+      "1": "zen",
+      "2": "dev",
+      "3": "im",
+      "4": "note",
+      "10": "rdp",
+      "focused": "🤪",
+      "urgent": "⚠️",
+      "default": "✧"
+    }
+  },
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip-format": "CPU Usage: {usage}%"
+  },
+  "memory": {
+    "format": "{}% ",
+    "tooltip-format": "Memory: {used} / {total} GB"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  }
+}
