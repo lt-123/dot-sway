@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 定义目标工作区名称
-TARGET_WORKSPACE="T"
+TARGET_WORKSPACE="$1"
 
 # 查询当前工作区的名称
 CURRENT_WORKSPACE=$(swaymsg -t get_workspaces | jq -r '.[] | select(.focused).name')

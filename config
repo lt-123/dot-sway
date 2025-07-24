@@ -44,7 +44,8 @@ exec wl-paste -t text --watch clipman store --no-persist
 
 bindsym Print exec grim -g "$(slurp)" - | swappy -f -
 
-bindsym F1 exec sh /home/liut/.config/sway/terminal.sh
+bindsym F1 exec sh /home/liut/.config/sway/terminal.sh T
+bindsym F12 exec sh /home/liut/.config/sway/terminal.sh M
 
 # bindsym $mod+L exec hyprlock
 

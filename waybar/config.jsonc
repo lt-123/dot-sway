@@ -11,6 +11,7 @@
     "format": "{icon}",
     "format-icons": {
       "T": "★",
+      "M": "🎵",
       "1": "zen",
       "2": "dev",
       "3": "im",
