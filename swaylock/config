@@ -1,0 +1,65 @@
+# Swaylock Configuration
+# 背景图片
+image=~/.config/sway/wallpapers/tokyonight.png
+scaling=fill
+
+# 禁用默认的验证失败提示
+ignore-empty-password
+
+# 指示器样式
+indicator-radius=120
+indicator-thickness=10
+
+# 圆环颜色 (未验证状态)
+ring-color=ffffff33
+
+# 按键时圆环颜色
+key-hl-color=a3be8c
+
+# 验证中圆环颜色
+ring-ver-color=88c0d0
+
+# 验证失败圆环颜色
+ring-wrong-color=bf616a
+
+# 清除时圆环颜色
+ring-clear-color=ebcb8b
+
+# 内圈颜色 (背景)
+inside-color=2e344088
+
+# 按键时内圈颜色
+inside-ver-color=5e81ac88
+
+# 验证失败内圈颜色
+inside-wrong-color=bf616a88
+
+# 清除时内圈颜色
+inside-clear-color=ebcb8b88
+
+# 分隔线颜色
+separator-color=00000000
+
+# 文字颜色
+text-color=d8dee9
+text-ver-color=d8dee9
+text-wrong-color=d8dee9
+text-clear-color=2e3440
+
+# 布局文字颜色
+layout-text-color=d8dee9
+layout-bg-color=00000000
+
+# BS 删除键高亮颜色
+bs-hl-color=bf616a
+
+# Caps Lock 指示器颜色
+caps-lock-key-hl-color=ebcb8b
+caps-lock-bs-hl-color=bf616a
+
+# 字体
+font=SF Pro Display
+
+# 指示器位置 (默认居中)
+indicator-x-position=960
+indicator-y-position=540

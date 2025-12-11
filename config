@@ -48,14 +48,14 @@ bindsym F1 exec sh ~/.config/sway/terminal.sh T
 bindsym F4 exec sh ~/.config/sway/terminal.sh M
 
 # 锁屏快捷键
-bindsym $mod+Escape exec ~/.config/sway/hyprlock/lock.sh
+bindsym $mod+Escape exec ~/.config/sway/swaylock/lock.sh
 
 ### Idle configuration
 # 5分钟无操作自动锁屏
 exec swayidle -w \
 exec swayidle -w \
-    timeout 300 '~/.config/sway/hyprlock/lock.sh' \
-    before-sleep '~/.config/sway/hyprlock/lock.sh'
+    timeout 300 '~/.config/sway/swaylock/lock.sh' \
+    before-sleep '~/.config/sway/swaylock/lock.sh'
 
 ### Input configuration
 #
