@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+set $term alacritty
 # Your preferred application launcher
 # set $menu wmenu-run
 set $menu rofi -show drun
@@ -34,9 +34,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 exec --no-startup-id nm-applet
 exec --no-startup-id fcitx5
-exec --no-startup-id tilda
+# exec --no-startup-id tilda
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id synology-drive
+# exec --no-startup-id synology-drive
 exec --no-startup-id /home/liut/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox %u
 exec --no-startup-id waybar -c /home/liut/.config/sway/waybar/config.jsonc -s /home/liut/.config/sway/waybar/style.css
 
@@ -45,7 +45,7 @@ exec wl-paste -t text --watch clipman store --no-persist
 bindsym Print exec grim -g "$(slurp)" - | swappy -f -
 
 bindsym F1 exec sh /home/liut/.config/sway/terminal.sh T
-bindsym F12 exec sh /home/liut/.config/sway/terminal.sh M
+bindsym F4 exec sh /home/liut/.config/sway/terminal.sh M
 
 # bindsym $mod+L exec hyprlock
 
