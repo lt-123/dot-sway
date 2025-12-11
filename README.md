@@ -7,9 +7,11 @@ Arch Linux 下的个人 Sway 窗口管理器配置。
 - **窗口管理器**: Sway (Wayland 混成器)
 - **状态栏**: Waybar 自定义配置
 - **应用启动器**: Rofi
-- **终端**: alacritty
+- **终端**: Alacritty
 - **截图工具**: Grim + Slurp + Swappy
 - **剪贴板管理器**: Clipman
+- **锁屏**: Hyprlock 自定义配置
+- **自动锁屏**: Swayidle (15分钟无操作自动锁屏)
 - **Vim 风格导航**: 使用 hjkl 进行窗口焦点切换
 
 ## 自动启动应用
@@ -20,6 +22,8 @@ Arch Linux 下的个人 Sway 窗口管理器配置。
 - Polkit GNOME 认证代理
 - JetBrains Toolbox
 - Waybar (状态栏)
+- Swayidle (自动锁屏管理)
+- Clipman (剪贴板管理)
 
 ## 快捷键
 
@@ -50,11 +54,17 @@ Arch Linux 下的个人 Sway 窗口管理器配置。
 - `$mod + r` - 进入调整大小模式
 
 ### 实用工具
+- `$mod + Escape` - 锁屏
 - `Print` - 截图（使用 slurp 选择区域，swappy 编辑）
 - `F1` - 启动终端（T 模式）
 - `F4` - 启动终端（M 模式）
 - `XF86AudioMute/LowerVolume/RaiseVolume` - 音频控制
 - `XF86MonBrightnessDown/Up` - 亮度控制
+
+### 自动功能
+- 15分钟无操作自动锁屏
+- 锁屏后10分钟自动关闭显示器
+- 系统睡眠前自动锁屏
 
 ## 工作区分配
 
@@ -75,18 +85,22 @@ Arch Linux 下的个人 Sway 窗口管理器配置。
 ├── waybar/             # Waybar 配置
 │   ├── config.jsonc
 │   └── style.css
+├── hyprlock/           # Hyprlock 锁屏配置
+│   ├── hyprlock.conf   # 锁屏界面配置
+│   └── lock.sh         # 锁屏启动脚本
 ├── wallpapers/         # 壁纸收藏
-├── terminal.sh         # 终端启动脚本
-└── hyprlock.conf       # 锁屏配置
+└── terminal.sh         # 终端启动脚本
 ```
 
 ## 依赖项
 
 所需软件包：
 - `sway` - 窗口管理器
-- `foot` - 终端模拟器
+- `alacritty` - 终端模拟器
 - `rofi` - 应用启动器
 - `waybar` - 状态栏
+- `hyprlock` - 锁屏工具
+- `swayidle` - 空闲管理器
 - `grim` - 截图工具
 - `slurp` - 区域选择器
 - `swappy` - 截图编辑器
@@ -96,7 +110,6 @@ Arch Linux 下的个人 Sway 窗口管理器配置。
 - `pulseaudio` / `pipewire-pulse` - 音频控制
 - `nm-applet` - 网络管理器小程序
 - `fcitx5` - 输入法
-- `tilda` - 下拉终端
 - `polkit-gnome` - 认证代理
 
 ## 安装

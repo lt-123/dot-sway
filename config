@@ -23,7 +23,7 @@ set $menu rofi -show drun
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-# output * bg /home/liut/.config/sway/wallpapers/AnimeWaiting2.jpg fill
+# output * bg ~/.config/sway/wallpapers/AnimeWaiting2.jpg fill
 #
 # Example configuration:
 #
@@ -37,30 +37,25 @@ exec --no-startup-id fcitx5
 # exec --no-startup-id tilda
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id synology-drive
-exec --no-startup-id /home/liut/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox %u
-exec --no-startup-id waybar -c /home/liut/.config/sway/waybar/config.jsonc -s /home/liut/.config/sway/waybar/style.css
+exec --no-startup-id ~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox %u
+exec --no-startup-id waybar -c ~/.config/sway/waybar/config.jsonc -s ~/.config/sway/waybar/style.css
 
 exec wl-paste -t text --watch clipman store --no-persist
 
 bindsym Print exec grim -g "$(slurp)" - | swappy -f -
 
-bindsym F1 exec sh /home/liut/.config/sway/terminal.sh T
-bindsym F4 exec sh /home/liut/.config/sway/terminal.sh M
+bindsym F1 exec sh ~/.config/sway/terminal.sh T
+bindsym F4 exec sh ~/.config/sway/terminal.sh M
 
-# bindsym $mod+L exec hyprlock
+# 锁屏快捷键
+bindsym $mod+Escape exec ~/.config/sway/hyprlock/lock.sh
 
 ### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+# 15分钟无操作自动锁屏，锁屏后10分钟关闭显示器
+exec swayidle -w \
+         timeout 900 '~/.config/sway/hyprlock/lock.sh' \
+         timeout 1500 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep '~/.config/sway/hyprlock/lock.sh'
 
 ### Input configuration
 #
@@ -291,4 +286,4 @@ bindsym $mod+r mode "resize"
 # }
 
 include /etc/sway/config.d/*
-include /home/liut/.config/sway/config.d/*
+include ~/.config/sway/config.d/*
