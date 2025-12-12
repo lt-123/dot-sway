@@ -51,11 +51,12 @@ bindsym F4 exec sh ~/.config/sway/terminal.sh M
 bindsym $mod+Escape exec ~/.config/sway/swaylock/lock.sh
 
 ### Idle configuration
-# 5分钟无操作自动锁屏
+# 5分钟无操作自动锁屏, 30分钟无操作自动关闭屏幕
 exec swayidle -w \
-exec swayidle -w \
+    before-sleep '~/.config/sway/swaylock/lock.sh' \
     timeout 300 '~/.config/sway/swaylock/lock.sh' \
-    before-sleep '~/.config/sway/swaylock/lock.sh'
+    timeout 1800 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"'
 
 ### Input configuration
 #
