@@ -1,0 +1,21 @@
+# 4K Monitor Optimization
+
+# Output scaling
+# Adjust the scale factor as needed (e.g., 1.5 for 27" 4K, 2 for smaller 4K screens)
+# Use 'swaymsg -t get_outputs' to find your specific output name if you want to target a specific monitor.
+output * scale 1.5
+
+# Ensure wallpaper fills the screen properly
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
+# Font configuration
+# Increase font size for high DPI screens
+font pango:monospace 12
+
+# Cursor size (optional, uncomment if needed)
+# seat seat0 xcursor_theme default 48
+
+# XWayland scaling (optional)
+# By default, Sway scales XWayland apps. If they look blurry, you can disable scaling 
+# but they will appear small.
+# xwayland force_zero_scaling enable
